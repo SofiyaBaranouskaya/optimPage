@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Туристическое агентство предлагает лучшие туры, горящие путёвки, пляжный отдых и экскурсии по всему миру. Индивидуальный подбор путешествий по доступным ценам.">
+    <meta name="keywords" content="туристическое агентство, туры, горящие путевки, пляжный отдых, экскурсии, путешествия, Европа, Азия, Турция, Египет">
+    <meta name="author" content="Туристическое агентство">
+    <title>Туристическое агентство | Лучшие туры и путешествия по миру</title>
+
+    <!-- Подключаем красивый шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Сброс и базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fdff;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.9)), url('https://t3.ftcdn.net/jpg/03/15/97/34/360_F_315973434_3bY2d9R7bwyuJvzMlmzqG7tUtkhQ8z2e.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            color: #007bff;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            margin: 30px 0 15px;
+            color: #0056b3;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            max-width: 600px;
+            margin: 20px auto;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .contact {
+            background: #007bff;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin: 60px 0 0;
+        }
+
+        .contact a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #333;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            header {
+                padding: 80px 15px;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Добро пожаловать в наше туристическое агентство</h1>
+            <p>Мы предлагаем лучшие туры, горящие путёвки и незабываемый отдых по всему миру</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Почему выбирают именно нас?</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Опытные специалисты</h3>
+                    <p>Наши менеджеры помогут подобрать тур мечты с учётом всех ваших пожеланий.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Лучшие цены</h3>
+                    <p>Прямые контракты с отелями и авиакомпаниями — выгодные предложения каждый день.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Индивидуальный подход</h3>
+                    <p>Создаём персонализированные маршруты под ваш бюджет и интересы.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Популярные направления</h2>
+            <p>Исследуйте самые востребованные места для отдыха и экскурсий в 2026 году.</p>
+
+            <div class="gallery">
+                <img src="https://t4.ftcdn.net/jpg/14/55/65/43/360_F_1455654364_b91LqD39vedalg0gV2arQnFBkyhiBz1o.jpg" 
+                     alt="Современный интерьер офиса туристического агентства с консультантами">
+                
+                <img src="https://t3.ftcdn.net/jpg/02/94/36/08/360_F_294360874_2sHHQRVl2OBCF6sLn8w9qTmi8nE3iRjP.jpg" 
+                     alt="Красивый тропический пляж с бирюзовой водой и пальмами на закате">
+                
+                <img src="https://t3.ftcdn.net/jpg/03/27/39/36/360_F_327393664_5Y8rT4Y0Z5Z5Z5Z5Z5Z5Z5Z5Z5.jpg" 
+                     alt="Древний город в Европе с собором и туристами на экскурсии">
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Готовы к путешествию?</h2>
+            <p>Звоните: <a href="tel:+71234567890">+7 (123) 456-78-90</a><br>
+               Пишите: <a href="mailto:info@travelagency.ru">info@travelagency.ru</a></p>
+            <p>Мы работаем ежедневно с 9:00 до 20:00</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Туристическое агентство. Все права защищены.</p>
+    </footer>
+</body>
+</html>
