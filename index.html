@@ -6,13 +6,29 @@
     <meta name="description" content="Туристическое агентство предлагает лучшие туры, горящие путёвки, пляжный отдых и экскурсии по всему миру. Индивидуальный подбор путешествий по доступным ценам.">
     <meta name="keywords" content="туристическое агентство, туры, горящие путевки, пляжный отдых, экскурсии, путешествия, Европа, Азия, Турция, Египет">
     <meta name="author" content="Туристическое агентство">
+    <meta name="google-site-verification" content="MMqpFCwfORSIiB8atER9TED9_S6g4LoanilBlLQnF08" />
     <title>Туристическое агентство | Лучшие туры и путешествия по миру</title>
 
-    <!-- Подключаем красивый шрифт -->
+    <!-- Микроразметка Organization для главной (в <head>) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Туристическое агентство",
+      "description": "Подбор и бронирование туров по всему миру",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Минск"
+      },
+      "telephone": "+7 (123) 456-78-90",
+      "openingHours": "Mo-Fr 09:00-20:00",
+      "priceRange": "$"
+    }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Сброс и базовые стили */
         * {
             margin: 0;
             padding: 0;
@@ -24,7 +40,7 @@
             line-height: 1.6;
             color: #333;
             background-color: #f8fdff;
-            padding-bottom: 60px;
+            padding-bottom: 80px;
         }
 
         header {
@@ -36,23 +52,9 @@
             padding: 100px 20px;
         }
 
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin: 40px 0 20px;
-            color: #007bff;
-            text-align: center;
-        }
-
-        h3 {
-            font-size: 1.6rem;
-            margin: 30px 0 15px;
-            color: #0056b3;
-        }
+        h1 { font-size: 2.8rem; margin-bottom: 20px; }
+        h2 { font-size: 2rem; margin: 40px 0 20px; color: #007bff; text-align: center; }
+        h3 { font-size: 1.6rem; margin: 30px 0 15px; color: #0056b3; }
 
         p {
             max-width: 800px;
@@ -61,22 +63,7 @@
             font-size: 1.1rem;
         }
 
-        ul {
-            max-width: 600px;
-            margin: 20px auto;
-            padding-left: 30px;
-        }
-
-        li {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
         .features {
             display: flex;
@@ -97,9 +84,7 @@
             transition: transform 0.3s;
         }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
+        .feature-card:hover { transform: translateY(-10px); }
 
         .gallery {
             display: flex;
@@ -118,9 +103,7 @@
             transition: transform 0.3s;
         }
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
+        .gallery img:hover { transform: scale(1.05); }
 
         .contact {
             background: #007bff;
@@ -130,8 +113,78 @@
             margin: 60px 0 0;
         }
 
-        .contact a {
-            color: #fff;
+        .contact a { color: #fff; text-decoration: underline; }
+
+        /* Плавающие кнопки соцсетей слева */
+        .social-float {
+            position: fixed;
+            left: 15px;
+            top: 40%;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-float a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .social-float a:hover {
+            transform: scale(1.15);
+            background: #0056b3;
+        }
+
+        /* Кнопки репоста под секциями */
+        .share-buttons {
+            text-align: center;
+            margin: 35px 0 50px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .share-buttons a {
+            margin: 0 12px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .share-buttons a:hover { color: #0056b3; text-decoration: underline; }
+
+        /* Партнёры в футере */
+        .partners {
+            background: #f0f8ff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .partners h3 {
+            margin-bottom: 25px;
+            color: #0056b3;
+        }
+
+        .partners a {
+            color: #007bff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: color 0.3s;
+        }
+
+        .partners a:hover {
+            color: #0056b3;
             text-decoration: underline;
         }
 
@@ -143,33 +196,153 @@
             font-size: 0.9rem;
         }
 
-        /* Адаптивность */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            header {
-                padding: 80px 15px;
-            }
-
-            .feature-card {
-                padding: 20px;
-            }
+        /* Новые стили для улучшений */
+        .breadcrumbs { 
+            padding: 15px 0; 
+            font-size: 0.9rem; 
+            margin-top: 20px;
+        }
+        .breadcrumbs a { 
+            color: #007bff; 
+            text-decoration: none; 
+        }
+        .breadcrumbs span { 
+            color: #666; 
         }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.9rem;
-            }
+        .main-search { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            margin: 30px 0; 
+        }
+
+        .direction-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .direction-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .faq-section { 
+            background: #f9f9f9; 
+            padding: 40px; 
+            margin: 50px 0; 
+            border-radius: 12px; 
+        }
+        .faq-item { 
+            margin-bottom: 25px; 
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .faq-question { 
+            font-weight: bold; 
+            color: #0056b3; 
+            margin-bottom: 10px; 
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            background: #444;
+            padding: 25px;
+            text-align: center;
+        }
+        .footer-links a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .footer-links a:hover {
+            color: #ff6b35;
+            text-decoration: underline;
+        }
+
+        /* Стили для формы поиска */
+        .search-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .search-form input, .search-form select {
+            padding: 12px;
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .search-form button {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .search-form button:hover {
+            background: #ff5722;
+        }
+
+        /* Виджет онлайн-чата */
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .chat-widget:hover {
+            background: #1da851;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            header { padding: 80px 15px; }
+            .feature-card { padding: 20px; }
+            .social-float { left: 10px; }
+            .social-float a { width: 42px; height: 42px; font-size: 1.2rem; }
+            .search-form { flex-direction: column; }
+            .search-form input, .search-form select { min-width: 100%; }
+            .direction-card { width: 100%; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Плавающие кнопки социальных сетей -->
+    <div class="social-float">
+        <a href="https://vk.com/share.php?url=<?php echo urlencode('https://your-site.com' . $_SERVER['REQUEST_URI']); ?>&title=Лучшие туры и путешествия" target="_blank" rel="noopener">VK</a>
+        <a href="https://t.me/share/url?url=<?php echo urlencode('https://your-site.com' . $_SERVER['REQUEST_URI']); ?>&text=Смотрите крутые туры!" target="_blank" rel="noopener">TG</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('https://your-site.com' . $_SERVER['REQUEST_URI']); ?>" target="_blank" rel="noopener">FB</a>
+        <a href="https://wa.me/?text=Смотри%20классные%20туры%20здесь:%20" target="_blank" rel="noopener">WA</a>
+    </div>
+
+    <!-- Виджет онлайн-чата -->
+    <div class="chat-widget">
+        💬 Онлайн-чат
+    </div>
+
     <header>
         <div class="container">
             <h1>Добро пожаловать в наше туристическое агентство</h1>
@@ -178,6 +351,51 @@
     </header>
 
     <main class="container">
+        <!-- Хлебные крошки для главной -->
+        <nav class="breadcrumbs">
+            <span>Главная</span>
+        </nav>
+        
+        <!-- Усиленный CTA-блок с поиском -->
+        <div class="main-search">
+            <h2 style="color: #007bff; text-align: center;">Найдите свой идеальный тур</h2>
+            <form class="search-form">
+                <input type="text" placeholder="Откуда (Минск)">
+                <input type="text" placeholder="Куда (Турция, Египет...)">
+                <input type="date">
+                <button type="submit">Искать туры</button>
+            </form>
+            <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">Или <a href="hot-tours.html" style="color: #ff6b35; font-weight: bold;">посмотрите горящие туры →</a></p>
+        </div>
+        
+        <!-- Блок "Популярные направления" с ссылками на новые страницы -->
+        <section>
+            <h2>Популярные направления 2026</h2>
+            <div class="directions" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 30px 0;">
+                <a href="egypt-tours.html" style="text-decoration: none; color: inherit;">
+                    <div class="direction-card">
+                        <h3>Египет</h3>
+                        <p>От 550$</p>
+                        <p style="font-size: 0.9rem; color: #666;">Хургада, Шарм-эль-Шейх</p>
+                    </div>
+                </a>
+                <a href="turkey-tours.html" style="text-decoration: none; color: inherit;">
+                    <div class="direction-card">
+                        <h3>Турция</h3>
+                        <p>От 450$</p>
+                        <p style="font-size: 0.9rem; color: #666;">Анталия, Кемер, Алания</p>
+                    </div>
+                </a>
+                <a href="georgia-tours.html" style="text-decoration: none; color: inherit;">
+                    <div class="direction-card">
+                        <h3>Грузия</h3>
+                        <p>От 350$</p>
+                        <p style="font-size: 0.9rem; color: #666;">Батуми, Тбилиси</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
         <section>
             <h2>Почему выбирают именно нас?</h2>
             <div class="features">
@@ -194,6 +412,31 @@
                     <p>Создаём персонализированные маршруты под ваш бюджет и интересы.</p>
                 </div>
             </div>
+
+            <!-- Кнопки репоста после важной секции -->
+            <div class="share-buttons">
+                Поделитесь этой страницей: 
+                <a href="https://vk.com/share.php?url=<?php echo urlencode('https://your-site.com' . $_SERVER['REQUEST_URI']); ?>" target="_blank">ВКонтакте</a> •
+                <a href="https://t.me/share/url?url=<?php echo urlencode('https://your-site.com' . $_SERVER['REQUEST_URI']); ?>" target="_blank">Telegram</a> •
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('https://your-site.com' . $_SERVER['REQUEST_URI']); ?>" target="_blank">Facebook</a>
+            </div>
+        </section>
+
+        <!-- Блок FAQ на главной -->
+        <section class="faq-section">
+            <h2>Ответы на частые вопросы</h2>
+            <div class="faq-item">
+                <div class="faq-question">Как забронировать тур онлайн?</div>
+                <p>Выберите направление, даты и нажмите "Забронировать". Наш менеджер свяжется с вами в течение 15 минут для подтверждения заявки.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Можно ли оплатить тур в рассрочку?</div>
+                <p>Да, мы сотрудничаем с банками и предлагаем рассрочку на 3-12 месяцев без первоначального взноса.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Нужна ли виза для поездки в Турцию или Египет?</div>
+                <p>Для граждан Беларуси виза в Турцию не требуется. Для Египта виза оформляется по прибытии за 25$.</p>
+            </div>
         </section>
 
         <section>
@@ -201,14 +444,15 @@
             <p>Исследуйте самые востребованные места для отдыха и экскурсий в 2026 году.</p>
 
             <div class="gallery">
-                <img src="https://t4.ftcdn.net/jpg/14/55/65/43/360_F_1455654364_b91LqD39vedalg0gV2arQnFBkyhiBz1o.jpg" 
-                     alt="Современный интерьер офиса туристического агентства с консультантами">
-                
-                <img src="https://t3.ftcdn.net/jpg/02/94/36/08/360_F_294360874_2sHHQRVl2OBCF6sLn8w9qTmi8nE3iRjP.jpg" 
-                     alt="Красивый тропический пляж с бирюзовой водой и пальмами на закате">
-                
-                <img src="https://t3.ftcdn.net/jpg/03/27/39/36/360_F_327393664_5Y8rT4Y0Z5Z5Z5Z5Z5Z5Z5Z5Z5.jpg" 
-                     alt="Древний город в Европе с собором и туристами на экскурсии">
+                <img src="https://t4.ftcdn.net/jpg/14/55/65/43/360_F_1455654364_b91LqD39vedalg0gV2arQnFBkyhiBz1o.jpg" alt="Офис туристического агентства">
+                <img src="https://t3.ftcdn.net/jpg/02/94/36/08/360_F_294360874_2sHHQRVl2OBCF6sLn8w9qTmi8nE3iRjP.jpg" alt="Тропический пляж">
+                <img src="https://t3.ftcdn.net/jpg/03/27/39/36/360_F_327393664_5Y8rT4Y0Z5Z5Z5Z5Z5Z5Z5Z5Z5.jpg" alt="Европейский город">
+            </div>
+
+            <div class="share-buttons">
+                Расскажите друзьям о направлениях: 
+                <a href="https://vk.com/share.php?url=<?php echo urlencode('https://your-site.com' . $_SERVER['REQUEST_URI']); ?>" target="_blank">ВКонтакте</a> •
+                <a href="https://t.me/share/url?url=<?php echo urlencode('https://your-site.com' . $_SERVER['REQUEST_URI']); ?>" target="_blank">Telegram</a>
             </div>
         </section>
 
@@ -217,11 +461,40 @@
             <p>Звоните: <a href="tel:+71234567890">+7 (123) 456-78-90</a><br>
                Пишите: <a href="mailto:info@travelagency.ru">info@travelagency.ru</a></p>
             <p>Мы работаем ежедневно с 9:00 до 20:00</p>
+            <div style="margin-top: 20px;">
+                <button style="background: white; color: #007bff; border: none; padding: 12px 25px; border-radius: 5px; margin: 5px; font-weight: bold;">Заказать обратный звонок</button>
+                <button style="background: #ff6b35; color: white; border: none; padding: 12px 25px; border-radius: 5px; margin: 5px; font-weight: bold;">Подобрать тур</button>
+            </div>
         </section>
+
     </main>
 
+    <div class="partners">
+        <div class="container">
+            <h3>Наши партнёры и полезные ресурсы</h3>
+            <p>
+                <a href="https://www.coral.by" target="_blank" rel="noopener noreferrer">Coral Travel Belarus</a> •
+                <a href="https://www.teztour.by" target="_blank" rel="noopener noreferrer">Tez Tour</a> •
+                <a href="https://holiday.by" target="_blank" rel="noopener noreferrer">Holiday.by</a> •
+                <a href="https://www.teztour.by" target="_blank" rel="noopener noreferrer">www.teztour.by</a> •
+                <a href="https://www.coral.by" target="_blank" rel="noopener noreferrer">Coral Travel</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Улучшенный подвал с перелинковкой -->
+    <div class="footer-links">
+        <a href="hot-tours.html">Горящие туры</a>
+        <a href="egypt-tours.html">Египет</a>
+        <a href="turkey-tours.html">Турция</a>
+        <a href="georgia-tours.html">Грузия</a>
+        <a href="about.html">О компании</a>
+        <a href="reviews.html">Отзывы</a>
+    </div>
+
     <footer>
-        <p>&copy; 2026 Туристическое агентство. Все права защищены.</p>
+        <p>© 2026 Туристическое агентство. Все права защищены. Лицензия № РТО-123456</p>
     </footer>
+
 </body>
 </html>
